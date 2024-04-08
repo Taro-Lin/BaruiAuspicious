@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>八瑞吉祥</title>
+    <style type="text/css">
+        html {
+            font-size: 16px;
+        }
+
+        @media only screen and (max-width: 320px) {
+            html {
+                font-size: 16px !important;
+            }
+        }
+
+        @media only screen and (min-width: 1920px) {
+            html {
+                font-size: 96px !important;
+            }
+        }
+
+        body, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            background: url(img/1.png) no-repeat top center;
+            background-size: cover;
+            transition: all .5s ease-in-out;
+        }
+
+        #circle {
+            width: 100%;
+            position: absolute;
+            bottom: -8rem;
+            left: 0;
+            right: 0;
+            margin: auto auto;
+            animation: rotate 15s linear infinite;
+            -webkit-animation: rotate 15s linear infinite;
+        }
+
+        #qian {
+            position: absolute;
+            width: 71%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto auto;
+            font-size: 0;
+        }
+
+        #qian_text {
+            position: absolute;
+            width: 74%;
+            left: 0;
+            right: 0;
+            bottom: .6rem;
+            margin: auto auto;
+            animation: shake 2s linear infinite;
+            -webkit-animation: shake 2s linear infinite;
+        }
+
+        #show {
+            background: url(img/9.png) no-repeat center center;
+            background-size: cover;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+        }
+
+        #jieqian {
+            /*color: #f7e8c8;*/
+            /*text-decoration: none;*/
+            /*font-size: 1.1rem;*/
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: 25rem auto 0;
+            text-align: center;
+        }
+
+        #share_prompt {
+            display: block;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            transform-origin: top right;
+            -webkit-transform-origin: top right;
+            transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+            z-index: 999999;
+        }
+
+        @-webkit-keyframes rotate {
+            0% {
+                transform: rotateZ(0);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateZ(0);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @-webkit-keyframes shake {
+            10%, 30%, 50% {
+                -webkit-transform: translate3d(0, -3px, 0);
+                transform: translate3d(0, -3px, 0);
+            }
+
+            20%, 40%, 60% {
+                -webkit-transform: translate3d(0, 3px, 0);
+                transform: translate3d(0, 3px, 0);
+            }
+            70%, 80%, 90% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes shake {
+            10%, 30%, 50% {
+                -webkit-transform: translate3d(0, -3px, 0);
+                transform: translate3d(0, -3px, 0);
+            }
+
+            20%, 40%, 60% {
+                -webkit-transform: translate3d(0, 3px, 0);
+                transform: translate3d(0, 3px, 0);
+            }
+            70%, 80%, 90% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @-webkit-keyframes bounceInLeft {
+            0% {
+                -webkit-transform: translateY(-50%) translateX(-200%);
+                transform: translateY(-50%) translateX(-200%);
+            }
+
+            100% {
+                -webkit-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
+
+        @keyframes bounceInLeft {
+            0% {
+                -webkit-transform: translateY(-50%) translateX(-200%);
+                transform: translateY(-50%) translateX(-200%);
+            }
+
+            100% {
+                -webkit-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
+
+    </style>
+</head>
+<body style="height: 100%;position: relative;overflow: hidden;">
+<div id="container_1" style="height: 100%;display: block;position: relative;overflow: hidden;">
+    <div id="main" style="position: relative;height: 100%;">
+        <!--				<img src="img/u.png" id="text" style="position: absolute;width: 100%;top: 7rem;z-index: 9;"/>-->
+        <img src="img/2.png" id="circle"/>
+        <div id="qian">
+            <img src="img/5.png" id="qian_text"/>
+        </div>
+    </div>
+    <div id="mask"
+         style="position: absolute;height: 100%;width: 100%;top: 0;z-index: 99999;background: #000000;opacity: 0.8;display: none;">
+    </div>
+    <img src="img/share_02.png" id="share_prompt"/>
+    <div id="show" style="position: absolute;height: 100%;top: 0;width: 100%;z-index: 999;">
+        <img src="img/0.png" class="jieqian" id="lot"
+             style="display: inline-block;height: 25.8rem;position: absolute;top: 5rem;left: 0;right: 0;margin: auto auto;"/>
+        <a href="javascript:;"
+           style="cursor: none;display: flex; justify-content: center; width: 100%; margin-top: 25.8rem;" id="again">
+            <img src="img/7.png"
+                 style="display: inline-block; width: 9rem; margin-top: 120px; animation: shake 2s linear infinite; -webkit-animation: shake 2s linear infinite;"/>
+        </a>
+
+        <div id="explain" class=""
+             style="position: absolute;transform: translateY(-50%) translateX(-200%);-webkit-transform: translateY(-50%) translateX(-200%);width: 90%;top: 50%;left: 50%;text-align: center;">
+            <img src="img/0.png" style="display: block;width: 100%;" id="ex_img"/>
+            <!--					<a href="javascript:;" style="display: inline-block;width: 30%;margin-top: 25px;margin-right: 30px;" id="again">-->
+            <img src="img/0.png" style="display: block;width: 100%;"/>
+            </a>
+            <a href="javascript:;" style="display: inline-block;width: 30%;margin-top: 25px;" id="share">
+                <img src="img/0.png" style="display: block;width: 100%;"/>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="container_2" style="height: 100%;background: #c0221f;">
+    <p class="prompt" style="font-size: 25px;text-align: center;color: #fddca6;">请用竖屏展示</p>
+</div>
+</body>
+<script type="text/javascript">
+    var container_1_dom = document.getElementById("container_1");
+    var container_2_dom = document.getElementById("container_2");
+    var showDom = document.getElementById("show");
+    var explainDom = document.getElementById("explain");
+    var againDom = document.getElementById("again");
+    var exDom = document.getElementById("ex_img");
+    var qDom = document.getElementById("lot");
+    var shareDom = document.getElementById("share");
+    var sharePrompt = document.getElementById("share_prompt");
+    var maskDom = document.getElementById("mask");
+    var THRESHOLD = 1000;
+    var THRESHOLD_1 = 100;//兼容低版本
+    var preX = preY = preZ = x = y = z = 0;
+    var preTime = 0;
+
+    var exArr = [
+        ["img/0.png", "img/q_1.png"],
+        ["img/0.png", "img/q_2.png"],
+        ["img/0.png", "img/q_3.png"],
+        ["img/0.png", "img/q_4.png"],
+        ["img/0.png", "img/q_5.png"],
+        ["img/0.png", "img/q_6.png"],
+        ["img/0.png", "img/q_7.png"],
+        ["img/0.png", "img/q_8.png"],
+    ];
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        autoplay();
+    }, false);
+    rem();
+    window.addEventListener('deviceorientation', handleOrientation, false);//转动
+
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', shakeEventHandler, false);//监听的是加速度变化
+    } else {
+        alert('该换手机了,要不女票都被拐跑了');
+    }
+
+    maskDom.addEventListener("touchstart", function () {
+        //点击遮罩时，遮罩消失，分享缩小
+        this.style.display = "none";
+        sharePrompt.style.transform = "scale(0)";
+        sharePrompt.style.webkitTransform = "scale(0)";
+    })
+
+    shareDom.addEventListener("touchstart", function () {
+        sharePrompt.style.transform = "scale(1)";
+        sharePrompt.style.webkitTransform = "scale(1)";
+        maskDom.style.display = "block";
+    }, false);
+
+    againDom.addEventListener("touchstart", again, false);
+
+    function again() {
+        showDom.style.transform = "scale(0)";
+        showDom.style.webkitTransform = "scale(0)";
+        sharePrompt.style.transform = "scale(0)";
+        sharePrompt.style.webkitTransform = "scale(0)";
+        maskDom.style.display = "none";
+        window.addEventListener('devicemotion', shakeEventHandler, false);//监听的是加速度变化
+    }
+
+    function handleOrientation() {//横屏的时候
+        var winHei = window.innerHeight;
+        var winWid = window.innerWidth;
+        if (winWid > winHei) {//横屏的时候
+            container_1_dom.style.display = "none";
+            container_2_dom.style.display = "block"
+            container_2_dom.style.lineHeight = winHei + "px";
+        } else {
+            container_1_dom.style.display = "block";
+            container_2_dom.style.display = "none";
+        }
+    }
+
+    function shakeEventHandler(event) {//摇一摇函数
+        var acceleration = event.acceleration;
+        var curTime = new Date().getTime();
+        var diffTime = curTime - preTime;
+        if (diffTime > 100) { //应该可以用setinterval替换
+            preTime = curTime;
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+            var accelerationDiff = Math.abs(x + y + z - preX - preY - preZ) / diffTime * 10000;
+            var placeholderUrl = '0.png'; // 占位图片的 URL
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {//获取安卓系统号
+                var version = parseFloat(RegExp.$1);
+                if (version <= 5.1) {//如果版本号小于5.1的话
+                    if (accelerationDiff > THRESHOLD_1) {
+                        var i = (Math.random() * 9) | 0;
+                        exDom.setAttribute("src", placeholderUrl);
+                        qDom.setAttribute("src", placeholderUrl);
+                        var newImage1 = new Image();
+                        newImage1.src = exArr[i][0]; // 新的图片 URL
+                        newImage1.onload = function () {
+                            // 当新的图片被完全加载时，这个函数会被调用
+                            exDom.setAttribute("src", exArr[i][0]);
+                        };
+                        var newImage2 = new Image();
+                        newImage2.src = exArr[i][1]; // 新的图片 URL
+                        newImage2.onload = function () {
+                            // 当新的图片被完全加载时，这个函数会被调用
+                            qDom.setAttribute("src", exArr[i][1]);
+                        };
+                        showDom.style.transform = "scale(1)";
+                        showDom.style.webkitTransform = "scale(1)";
+                        explainDom.className = "";
+                        window.removeEventListener('devicemotion', shakeEventHandler, false);
+                        preX = preY = preZ = x = y = z = 0;//参数全部重置，否则可能和上次摇一摇的结果有关联
+                        accelerationDiff = 0;//置0
+                    }
+                }
+            }
+            if (accelerationDiff > THRESHOLD) {
+                var i = (Math.random() * 9) | 0;
+                exDom.setAttribute("src", placeholderUrl);
+                qDom.setAttribute("src", placeholderUrl);
+                var newImage1 = new Image();
+                newImage1.src = exArr[i][0]; // 新的图片 URL
+                newImage1.onload = function () {
+                    // 当新的图片被完全加载时，这个函数会被调用
+                    exDom.setAttribute("src", exArr[i][0]);
+                };
+                var newImage2 = new Image();
+                newImage2.src = exArr[i][1]; // 新的图片 URL
+                newImage2.onload = function () {
+                    // 当新的图片被完全加载时，这个函数会被调用
+                    qDom.setAttribute("src", exArr[i][1]);
+                };
+                showDom.style.transform = "scale(1)";
+                showDom.style.webkitTransform = "scale(1)";
+                explainDom.className = "";
+                window.removeEventListener('devicemotion', shakeEventHandler, false);
+                preX = preY = preZ = x = y = z = 0;//参数全部重置，否则可能和上次摇一摇的结果有关联
+                accelerationDiff = 0;//置0
+            }
+
+
+        }
+    }
+
+    function rem() {//响应式函数
+        var add = 0.05;//(96-16)/(1920-320)
+        var htmlDom = document.getElementsByTagName("html")[0];
+        var htmlWidth = htmlDom.clientWidth;
+        var fontSize = (htmlWidth - 320) * add + 16;
+        htmlDom.style.fontSize = fontSize + "px";
+    }
+</script>
+</html>
